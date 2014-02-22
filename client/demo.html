@@ -1,0 +1,15 @@
+<body>
+  {{> main}}
+</body>
+
+<template name="main">
+  <input type="button" value="Easy case" class="easy">
+  <input type="button" value="Hard case" class="hard"><br>
+  Most recent click by this tab: {{mostRecentClickTime}}<br>
+  Times you've clicked the button:
+  <ul>
+    {{#each clicks}}
+    <li>{{when}} &mdash; {{_id}}</li>
+    {{/each}}
+  </ul>
+</template>
